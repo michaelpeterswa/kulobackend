@@ -1,5 +1,6 @@
 tensorflow
 keras
 flask
+flask-cors
 gunicorn
 numpy

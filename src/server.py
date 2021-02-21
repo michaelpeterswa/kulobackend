@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from tensorflow import keras
 import numpy as np
 import math
 
 model = keras.models.load_model('../kulo_model')
 app = Flask(__name__)
+CORS(app)
 
 # https://www.raspberrypi.org/forums/viewtopic.php?t=149371#p982264
 def valmap(value, istart, istop, ostart, ostop):
